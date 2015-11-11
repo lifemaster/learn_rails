@@ -1,0 +1,13 @@
+<h2><%= @user.fullname %></h2>
+
+<p>Дата рождения:   <%= @user.fine_birthday   || 'не задано' %></p>
+<p>Логин:           <%= @user.login           || 'не задано' %></p>
+<p>Пароль:          <%= @user.password        || 'не задано' %></p>
+<p>Описание:        <%= @user.description     || 'не задано' %></p>
+
+<hr>
+
+<p><%= link_to 'Удалить', @user, method: :delete, data: { confirm: 'Вы уверены?' } %></p>
+<p><%= link_to 'Редактировать', edit_user_path(@user) %></p>
+
+<p><%= link_to 'Список пользователей', users_path %></p>

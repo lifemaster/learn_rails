@@ -1,0 +1,13 @@
+<h2>Список пользователей</h2>
+
+<% @users.each do |u| %>
+
+<p>
+  <%= link_to '+', upvote_user_path(u) %>
+  <%= link_to u.fullname, user_path(u) %> (<%= u.votes_count %>)</p>
+
+<% end %>
+
+<hr>
+
+<%= link_to 'Добавить', new_user_path %>

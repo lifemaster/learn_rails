@@ -1,0 +1,11 @@
+<h2>Список всех пользователей</h2>
+
+<% @users.each do |u| %>
+
+<p><%= link_to u.full_name, user_path(u) %></p>
+
+<% end %>
+
+<hr>
+
+<p><%= link_to 'Добавить пользователя', new_user_path %></p>

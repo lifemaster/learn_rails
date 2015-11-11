@@ -1,0 +1,15 @@
+<h2>Создание нового пользователя:</h2>
+
+<%= form_for @user do |f| %>
+
+    <p><%= f.label(:first_name, 'Имя:') %>          <br><%= f.text_field :first_name %></p>
+    <p><%= f.label(:last_name, 'Фамилия:') %>       <br><%= f.text_field :last_name %></p>
+    <p><%= f.label(:birthday, 'Дата рождения:') %>  <br><%= f.text_field :birthday, placeholder: 'YYYY-MM-DD' %></p>
+    <p><%= f.label(:login, 'Логин:') %>             <br><%= f.text_field :login %></p>
+    <p><%= f.label(:password, 'Пароль:') %>         <br><%= f.text_field :password %></p>
+    <p><%= f.label(:description, 'Описание:') %>    <br><%= f.text_area :description %></p>
+    <p><%= f.submit 'Создать' %></p>
+
+<% end %>
+
+<p><%= link_to 'Сисок пользователей', users_path %></p>
